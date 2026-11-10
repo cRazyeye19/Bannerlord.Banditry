@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/SubModule.xsd">
+  <Name value="Banditry"/>
+  <Id value="Banditry"/>
+  <Version value="v2.0.0"/>
+  <DefaultModule value="false"/>
+  <ModuleCategory value="Singleplayer"/>
+  <ModuleType value="Community"/>
+  <DependedModules>
+    <DependedModule Id="Bannerlord.MBOptionScreen"/>
+    <DependedModule Id="Native"/>
+    <DependedModule Id="SandBoxCore"/>
+    <DependedModule Id="Sandbox"/>
+    <DependedModule Id="StoryMode"/>
+  </DependedModules>
+  <DependedModuleMetadatas>
+    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis"/>
+    <DependedModuleMetadata id="Native" order="LoadBeforeThis"/>
+    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis"/>
+    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis"/>
+    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis"/>
+  </DependedModuleMetadatas>
+  <SubModules>
+    <SubModule>
+      <Name value="Banditry"/>
+      <DLLName value="Banditry.dll"/>
+      <SubModuleClassType value="Banditry.Main"/>
+      <Tags>
+        <Tag key="DedicatedServerType" value="none"/>
+        <Tag key="IsNoRenderModeElement" value="false"/>
+      </Tags>
+    </SubModule>
+  </SubModules>
+  <Xmls>
+    <XmlNode>
+      <XmlName id="NPCCharacters" path="BanditryTroops"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="partyTemplates" path="BanditryPartyTemplates"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+  </Xmls>
+</Module>
